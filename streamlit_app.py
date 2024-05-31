@@ -2,6 +2,17 @@ import streamlit as st
 import pandas as pd
 from fpdf import FPDF
 
+# Add custom CSS to hide the GitHub icon
+# Hide Streamlit's GitHub icon
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # Function to load Excel files
 def load_data(file):
     return pd.read_excel(file)
