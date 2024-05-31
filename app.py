@@ -1,6 +1,15 @@
 import streamlit as st
 import pandas as pd
 
+# css
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 # Function to load Excel files
 def load_data(file):
     return pd.read_excel(file)
