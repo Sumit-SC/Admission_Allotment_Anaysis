@@ -33,8 +33,6 @@ def filter_colleges_by_marks(data, marks_col, marks):
     return data[data[marks_col] <= marks]
 
 # generate pdf
-from fpdf import FPDF
-
 def generate_pdf(df, user_marks):
     # Sort DataFrame by marks column
     df_sorted = df.sort_values(by=df.columns[1], ascending=False)
